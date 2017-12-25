@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <title>2017年新零售投票系统</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css?v=1" media="all">
+    <script>!function (a) { var b, c; /Android (\d+\.\d+)/.test(navigator.userAgent) ? (b = parseFloat(RegExp.$1), b > 2.3 ? (c = parseInt(window.screen.width) / a, document.write('<meta name="viewport" content="width=' + a + ",minimum-scale=" + c + ",maximum-scale=" + c + ', target-densitydpi=device-dpi">')) : document.write('<meta name="viewport" content="width=' + a + ',target-densitydpi=device-dpi">')) : document.write('<meta name="viewport" content="width=' + a + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui">') }(750);</script>
+    <script src="js/zepto.min.js"></script>
+</head>
+
+<body>
+   
+    <div class="page" style="position: relative;">
+            <div class="share">
+                <div class="share_text">
+                        <p>分享到朋友圈</p>
+                        <p>获得<span>更多支持</span>哦</p>
+                </div>
+            </div>
+        <header>
+            <div class="banner"></div>
+        </header>
+        <article class="main">
+            <div class="co_vote">
+                <div class="co_logo">
+                    <img src="img/co1.png">
+                </div>
+                <h4 class="co_info">考拉先生</h4>
+                <div class="co_num">
+                    <span class="num1">4232</span>票
+                    <span class="num2"></span>
+                </div>
+                <div class="con1">
+                    <div class="title1">
+                        <span>评选北京美食新榜样Top10</span>
+                    </div>
+                    <p>
+                        中国领先智慧店商整合平台平台平台中国领先智慧店商合平台平台平台中国领先智慧店商整合平台平台平台商整合平台平台平台商整合平台平台平台
+                    </p>
+                </div>
+                <div class="tips">*投票说明：每个微信号每日限投10票，同个参选奖项每天限投1票，最终评选结果由网民投票以及评选团根据企业情况综合决定。
+                </div>
+                <a id="vote_btn" class="btn">投 票</a>
+                <div class="co_btn">
+                    <a href="result.html" class="sign_up">查看排行榜</a>
+                    <a href="signup.html" class="sign_up">我也要报名</a>
+                </div>
+            </div>
+        </article>
+    </div>
+
+
+
+    </div>
+
+</body>
+<script src="js/zepto.min.js"></script>
+<script>
+    $(function(){
+        var vote=false;
+        $("#vote_btn").click(function(){
+            var nowNum=parseInt($(".co_num span.num1").html())+1
+            if(vote==false){
+                vote=true;
+                //$(".co_num").append('<span class="num2">'+nowNum+'</span>')
+                $(".co_num span.num1").addClass("animat1")
+                $(".co_num span.num2").html(nowNum)
+                $(".co_num span.num2").addClass("animat2")
+                
+            }else{
+                $(".share").show(100)
+            }   
+        })
+        $(".share").click(function(){
+            $(this).hide()
+        })
+    })
+</script>
+</html>
